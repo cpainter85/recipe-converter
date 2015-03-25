@@ -1,8 +1,7 @@
 require_relative '../recipe_converter'
 
 RSpec.describe RecipeConverter do
-  let(:list_of_ingredients) {[{salt: 480}, {oil: 720} ]}
-  let(:ingredients) { RecipeConverter.new(:list_of_ingredients)}
+  let(:ingredients) { RecipeConverter.new([{salt: 480}, {oil: 720} ])}
 
   describe '#to_tablespoons' do
     it 'returns list of ingredients with amounts in tablespoons' do
